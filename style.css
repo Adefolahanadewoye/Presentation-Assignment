@@ -1,0 +1,108 @@
+html,
+body {
+   height: 100%;
+   width: 100%;
+}
+
+Home / Carousel / Image Slider in JavaScript Source Code Image Slider in JavaScript Source Code Image Slider in JavaScript Source Code Code Snippet: Best Pure JavaScript Images Slider File Type: Zip (HTML, CSS, JavaScript) Author: Moaaz Ahmed Edit Code online: View on CodePen Share This: Published: 6 months ago Last Updated: 6 months ago Downloads: 3,
+712 Demo Download (5 KB) This JavaScript source code helps you to create an image slider. It comes with all basic features like slide images with next previous buttons,
+dots navigation,
+and slides/images counter. You can easily integrate this code to make a super lightweight image slider. How to Create Image Slider in JavaScript Source Code 1. First of all,
+create the HTML structure as follows: <div class="slider-container"><div class="slides fade"><div class="slider-numbers">1/4</div><div class="slider-image"><img src="https://image.ibb.co/kpmt3k/background_1.jpg" alt="background_1"></div><div class="slider-caption">Caption 1</div></div>< !-- slider --><div class="slides fade"><div class="slider-numbers">2/4</div><div class="slider-image"><img src="https://image.ibb.co/mGxNw5/background_2.jpg" alt="background_2"></div><div class="slider-caption">Caption 2</div></div>< !-- slider --><div class="slides fade"><div class="slider-numbers">3/4</div><div class="slider-image"><img src="https://image.ibb.co/gd5gpQ/background_3.jpg" alt="background_3"></div><div class="slider-caption">Caption 3</div></div>< !-- slider --><div class="slides fade"><div class="slider-numbers">4/4</div><div class="slider-image"><img src="https://image.ibb.co/jOgXw5/background_4.jpg" alt="background_4"></div><div class="slider-caption">Caption 4</div></div>< !-- slider -->< !-- Slider Next and Previous buttons --><a class="prev" onclick="plusIndex(-1)">❮</a><a class="next" onclick="plusIndex(+1)">❯</a>< !-- Slider Selection Bullets --><div class="slider-bullets" id="slider-bullets"><span class="dots" onclick="currentSlide(1)"></span><span class="dots" onclick="currentSlide(2)"></span><span class="dots" onclick="currentSlide(3)"></span><span class="dots" onclick="currentSlide(4)"></span></div>< !-- Slider Bullets --></div>2. After that,
+add the following CSS styles to your project: 
+* {
+   box-sizing: border-box;
+   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+   padding: 0px;
+   margin: 0px;
+}
+
+.slider-container {
+   width: 720px;
+   margin: auto;
+   position: relative;
+}
+
+.slider-container .fade {
+   animation-name: fade;
+   animation-duration: 0.5s;
+}
+
+@keyframes fade {
+   from {
+      opacity: 0.4
+   }
+
+   to {
+      opacity: 1
+   }
+}
+
+.slider-container .slides .slider-numbers {
+   position: absolute;
+   padding: 15px;
+   font-size: 15px;
+   color: #FFF
+}
+
+.slider-container .slides .slider-caption {
+   text-align: center;
+   font-size: 20px;
+   position: absolute;
+   bottom: 15px;
+   width: 100%;
+   color: #FFF;
+   padding: 10px;
+}
+
+.slider-container .prev,
+.slider-container .next {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   color: #FFF;
+   font-weight: bold;
+   padding: 10px;
+   font-size: 30px;
+   text-decoration: none;
+}
+
+.slider-container .next {
+   right: 0px;
+}
+
+.slider-container .prev:hover {
+   background: rgba(0, 0, 0, 0.6);
+   border-top-right-radius: 3px;
+   border-bottom-right-radius: 3px;
+   cursor: pointer;
+}
+
+.slider-container .next:hover {
+   background: rgba(0, 0, 0, 0.6);
+   border-top-left-radius: 3px;
+   border-bottom-left-radius: 3px;
+   cursor: pointer;
+}
+
+.slider-container .slider-bullets {
+   text-align: center;
+}
+
+.slider-container .slider-bullets .dots {
+   display: inline-block;
+   padding: 5px;
+   width: 10px;
+   height: 10px;
+   background-color: #808080;
+   border-radius: 50%;
+}
+
+.slider-container .slider-bullets .dots:hover {
+   background-color: #383838;
+   cursor: pointer;
+}
+
+.slider-container .slider-bullets .active {
+   background-color: #383838;
+}
